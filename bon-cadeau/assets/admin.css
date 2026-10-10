@@ -1,0 +1,195 @@
+.bc-wrap .bc-panel {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	padding: 12px 16px;
+	margin: 0 0 16px;
+}
+.bc-wrap .bc-panel h2 {
+	margin: 0 0 10px;
+	font-size: 14px;
+}
+.bc-wrap .bc-panel label {
+	display: block;
+	margin-bottom: 10px;
+	font-weight: 600;
+}
+.bc-wrap .bc-panel label input[type="text"],
+.bc-wrap .bc-panel label input[type="number"],
+.bc-wrap .bc-panel label select,
+.bc-wrap .bc-panel label textarea {
+	display: block;
+	width: 100%;
+	margin-top: 4px;
+	font-weight: normal;
+}
+.bc-wrap .bc-row {
+	display: flex;
+	gap: 10px;
+}
+.bc-wrap .bc-row > label {
+	flex: 1;
+}
+.bc-wrap .bc-check {
+	align-self: flex-end;
+	font-weight: normal !important;
+}
+
+/* Editor layout */
+.bc-editor-layout {
+	display: flex;
+	gap: 20px;
+	align-items: flex-start;
+	margin-top: 12px;
+}
+.bc-canvas-col {
+	flex: 1;
+	min-width: 0;
+}
+.bc-side-col {
+	width: 330px;
+	flex-shrink: 0;
+	position: sticky;
+	top: 40px;
+}
+@media (max-width: 1100px) {
+	.bc-editor-layout { flex-direction: column; }
+	.bc-side-col { width: 100%; position: static; }
+}
+.bc-toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin-bottom: 10px;
+}
+.bc-toolbar .dashicons,
+.bc-wrap .button .dashicons {
+	vertical-align: text-bottom;
+}
+
+.bc-canvas {
+	position: relative;
+	background: repeating-conic-gradient(#f0f0f1 0% 25%, #fff 0% 50%) 50% / 20px 20px;
+	border: 1px solid #dcdcde;
+	min-height: 200px;
+	user-select: none;
+	line-height: 0;
+}
+.bc-canvas > img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.bc-canvas .bc-empty {
+	padding: 80px 20px;
+	text-align: center;
+	color: #646970;
+	line-height: 1.5;
+}
+.bc-zone {
+	position: absolute;
+	cursor: move;
+	outline: 1px dashed rgba(34, 113, 177, .7);
+	touch-action: none;
+}
+.bc-zone:hover {
+	outline-color: #2271b1;
+	background: rgba(34, 113, 177, .06);
+}
+.bc-zone.is-selected {
+	outline: 2px solid #2271b1;
+	background: rgba(34, 113, 177, .1);
+}
+.bc-zone-text {
+	white-space: pre-wrap;
+	overflow-wrap: normal;
+	pointer-events: none;
+}
+.bc-handle {
+	position: absolute;
+	top: 50%;
+	right: -6px;
+	width: 10px;
+	height: 22px;
+	margin-top: -11px;
+	background: #2271b1;
+	border-radius: 3px;
+	cursor: ew-resize;
+}
+
+.bc-modal {
+	position: fixed;
+	inset: 0;
+	z-index: 100000;
+	background: rgba(0, 0, 0, .75);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 30px;
+}
+.bc-modal[hidden] {
+	display: none;
+}
+.bc-modal-inner {
+	position: relative;
+	max-width: 100%;
+	max-height: 100%;
+}
+.bc-modal-inner img {
+	display: block;
+	max-width: 100%;
+	max-height: calc(100vh - 60px);
+	box-shadow: 0 10px 40px rgba(0, 0, 0, .5);
+}
+.bc-modal-close {
+	position: absolute;
+	top: -14px;
+	right: -14px;
+	border-radius: 50% !important;
+}
+
+/* Create form */
+.bc-create-form {
+	max-width: 900px;
+}
+.bc-key {
+	margin-left: 6px;
+	opacity: .6;
+}
+
+/* List */
+.bc-new img {
+	display: block;
+	max-width: 600px;
+	width: 100%;
+	height: auto;
+	border: 1px solid #dcdcde;
+}
+.bc-inline-email {
+	display: flex;
+	gap: 6px;
+	flex-wrap: wrap;
+}
+.bc-inline-email input[type="email"] {
+	min-width: 260px;
+}
+.bc-table .bc-highlight td {
+	background: #f0f6fc;
+}
+.bc-badge {
+	display: inline-block;
+	padding: 2px 8px;
+	border-radius: 10px;
+	font-size: 12px;
+	font-weight: 600;
+}
+.bc-valid { background: #d1f0d8; color: #146c2e; }
+.bc-used { background: #e2e4e7; color: #50575e; }
+.bc-expired { background: #fbe1e1; color: #a12828; }
+.bc-actions { white-space: nowrap; }
+.bc-email-form {
+	margin-top: 6px;
+	display: flex;
+	gap: 4px;
+}
+.bc-email-form[hidden] { display: none; }
